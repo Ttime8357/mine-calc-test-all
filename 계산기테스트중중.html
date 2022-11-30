@@ -1,0 +1,44 @@
+ <html>
+ <head>
+ <script>
+    function cal(){
+
+   
+            var num1 = document.getElementById("txt1").value;
+            var num2 = document.getElementById("txt2").value;
+            var num3 = document.getElementById("txt3").value;
+            var num4 = document.getElementById("txt4").value;
+            var num5 = document.getElementById("cal").value;
+          
+           
+            var allvalue = parseInt(num3)*9*64 + parseInt(num4)*9 + parseInt(num2);
+            var allvalues = parseInt(allvalue);
+            var result = allvalues*parseInt(num1)*parseInt(num5);
+
+        
+            // exp 에 들어간 문자열이
+            var exp = allvalues*num1*num5
+            // eval 을 통해 하나의 식으로 변환 계산되어 data 에 저장됨
+            var data = eval(exp);
+
+
+            document.getElementById("result").value = data;
+            
+        }
+ </script>
+</head>
+<body>
+    광물 개당 가격:<input type="text" name="" id="txt1" size=""><br>
+    블록(세트 단위):<input type="text" name="" id="txt3" size=""><br>
+    블록 나머지:<input type="text" name="" id="txt4" size=""><br>
+    광물 낱개 나머지:<input type="text" name="" id="txt2" size=""><br>
+    배율:<input type="text" nane="" id="cal" size="">
+    <input type="button" value="계산하기" onclick="cal()">
+    <br>
+    <hr>
+
+    <input type="text" name="" id="result">
+
+    
+</body>
+</html>

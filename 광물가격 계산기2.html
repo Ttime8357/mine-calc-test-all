@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>update 22.11.28 (made by Ttime8357)
+  <meta charset="UTF-8">
+ </head>
+ <body>
+
+<h2>광물 가격 계산기</h2>
+
+<script>
+var price;
+var blockcount;
+var multiply;
+var input;
+var result;
+var blockcounter;
+var checkblock;
+var checkblocks;
+var mine;
+var mines;
+
+    input = prompt ("광물 1개의 가격을 입력하세요");
+    price=parseInt(input);
+    input = prompt ("광물의 개수를 입력하세요(블럭이 아닌 광물의 개수)");
+    blockcount = parseInt(input);
+    input = prompt ("블록의 개수를 입략해주세요");
+    blockcounter = parseInt(input);
+    input = prompt ("설정할 배율을 입력하세요(적용하지 않으려면 1을 입력해주세요)");
+    multiply = parseInt(input);
+
+    checkblock = (blockcounter*9);
+    checkblocks = parseInt(checkblock);
+    mine=(blockcount+checkblocks);
+    mines=parseInt(mine);
+    result = (price*mines*multiply);
+
+    alert("광물의 총량은 "+(mines)+"개 입니다"+" 계산한 가격은 "+(result)+"원 입니다");
+
+    document.write("당신이 계산한 광물의 총 가격은 "+ result +"원이고 총량은 "+mines+"개입니다.");
+
+
+</script>
+
+
+ </body>
+</html>

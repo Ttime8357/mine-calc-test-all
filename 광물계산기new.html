@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+ <meta charset="UTF-8">
+ <head>
+<style>
+  
+    input {
+  border: 2px solid gray;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+</style>
+ <script>
+    function cal(){
+
+   
+            var num1 = document.getElementById("txt1").value;
+            var num2 = document.getElementById("txt2").value;
+            var num3 = document.getElementById("txt3").value;
+            var num4 = document.getElementById("txt4").value;
+            var num5 = document.getElementById("cal").value;
+          
+           
+            var allvalue = parseInt(num3)*9*64 + parseInt(num4)*9 + parseInt(num2);
+            var allvalues = parseInt(allvalue);
+            var result = allvalues*parseInt(num1)*parseInt(num5);
+            //var result = (parseInt(num3)*9*64 + parseInt(num4)*9 + parseInt(num2))*parseInt(num1)*parseInt(num5);
+        
+
+            var exp = allvalues*num1*num5
+
+            var data = eval(exp);
+
+
+            document.getElementById("result").value = data;
+            
+        }
+ </script>
+</head>
+<body style="background-color : #F5FFFA">
+    <h3>광물 가격 계산기</h3>
+    <hr>
+    광물 개당 가격 :  <input type="text" name="" id="txt1" size=""><br>
+    블록(세트 단위) :  <input type="text" name="" id="txt3" size=""><br>
+    블록 나머지 :  <input type="text" name="" id="txt4" size=""><br>
+    광물 낱개 나머지 :  <input type="text" name="" id="txt2" size=""><br>
+    배율 :  <input type="text" nane="" id="cal" size="">
+    <input type="button" value="계산하기" onclick="cal()"style="background-color:#98FB98">
+    <br>
+    <hr>
+    <br>
+    <input type="text" name="" id="result"style="background-color: #FFFFE0">원
+
+    <br>
+    <br>
+    <hr>
+    update date 2022.11.29 / made by Ttime8357
+
+
+    
+</body>
+</html>
